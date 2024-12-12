@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1 id="namaLengkap">Ghufron Bagaskara</h1>
+    <button onclick="setNewElement()">Ganti Data</button>
+  </header>
+  <main>
+    <article>
+      <h3 id="judul1">Rekomendasi Film Action</h3>
+      <p>ini adalah film actionnya</p>
+    </article>
+    <article>
+      <h3 id="judul2">Rekomendasi Film Drama</h3>
+      <p>ini adalah film dramanya</p>
+    </article>
+    <article>
+      <h3 id="judul3">Rekomendasi Film Romance</h3>
+      <p>ini adalah film romancenya</p>
+    </article>
+  </main>
+  <footer>
+    <p>🔥 by : Ghufron Bagaskara</p>
+  </footer>
+
+  <script>
+    function setNewElement() {
+      const inputNama = prompt("Siapa nama kamu");
+      namaLengkap.textContent = inputNama;
+
+
+      const inputJudul1 = prompt("Rekomendasi film action!");
+      judul1.textContent = inputJudul1;
+
+      const inputJudul2 = prompt("Rekomendasi film drama");
+      judul2.textContent = inputJudul2;
+
+      const inputJudul3 = prompt("Rekomendasi film romance");
+      judul3.textContent = inputJudul3;
+
+
+    }
+  </script>
+
+</body>
+
+</html>
