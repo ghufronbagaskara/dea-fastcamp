@@ -67,9 +67,13 @@
     const user = userName
     const film1 = films[0]
     const film2 = films[1];
+    console.group("%cLOGGING FILM :", "color: tomato; font-size: 24px")
+    console.log({film1});
+    console.log({film2});
+    console.groupEnd()
 
-    const information = [user, film1, film2]
-    console.log(information);
+    const infoFilm = [film1, film2]
+    console.table(infoFilm);    
     
 
     const article1 = document.getElementsByTagName("article")[0];
