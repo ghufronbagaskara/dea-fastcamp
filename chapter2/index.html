@@ -32,6 +32,27 @@
   </footer>
 
   <script>
+
+    const article1 = document.getElementsByTagName("article")[0]
+    const article2 = document.getElementsByTagName("article")[1]
+    const article3 = document.getElementsByTagName("article")[2]
+
+    function articleEffect() {
+      article2.style.backgroundColor = "tomato"
+      article2.style.color = "white"
+      article2.style.scale = "1.2"
+      article2.style.transition = "0.5s"
+      
+      article1.style.scale = "0.7"
+      article1.style.transition = "1.56s"
+      article3.style.scale = "0.7"
+      article3.style.transition = "1.5s"
+    }
+
+    article2.addEventListener("click", articleEffect)
+
+    
+
     function setNewElement() {
       const inputNama = prompt("Siapa nama kamu");
       namaLengkap.textContent = inputNama;
@@ -45,7 +66,6 @@
 
       const inputJudul3 = prompt("Rekomendasi film romance");
       judul3.textContent = inputJudul3;
-
 
     }
   </script>
