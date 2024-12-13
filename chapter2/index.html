@@ -11,7 +11,7 @@
 <body>
   <header>
     <h1 id="namaLengkap">Ghufron Bagaskara</h1>
-    <button onclick="setNewElement()">Ganti Data</button>
+    <button onclick="getUserData()">Ganti Data</button>
   </header>
   <main>
     <article>
@@ -32,9 +32,7 @@
   </footer>
 
   <script>
-    
 
-    
     const article1 = document.getElementsByTagName("article")[0];
     const article2 = document.getElementsByTagName("article")[1];
     const article3 = document.getElementsByTagName("article")[2];
@@ -44,7 +42,7 @@
       article2.style.color = "white"
       article2.style.scale = "1.2"
       article2.style.transition = "0.5s"
-      
+
       article1.style.scale = "0.7"
       article1.style.transition = "1.56s"
       article3.style.scale = "0.7"
@@ -57,29 +55,20 @@
       article3.style.scale = "1"
     }
 
-    function removeArticle(){
+    function removeArticle() {
       const isConfirm = confirm("apakah anda yakin ingin menghapus artikel ini..")
       if (isConfirm) {
         article2.remove()
       }
     }
 
+    function getUserData() {
+      const apiURL = "https://dummyjson.com/users/1"
 
-
-
-    function setNewElement() {
-      const inputNama = prompt("Siapa nama kamu");
-      namaLengkap.textContent = inputNama;
-
-
-      const inputJudul1 = prompt("Rekomendasi film action!");
-      judul1.textContent = inputJudul1;
-
-      const inputJudul2 = prompt("Rekomendasi film drama");
-      judul2.textContent = inputJudul2;
-
-      const inputJudul3 = prompt("Rekomendasi film romance");
-      judul3.textContent = inputJudul3;
+      fetch(apiURL)
+        .then((data) => data.json()) // format data to json
+        .then((user) => (namaLengkap.textContent = user.username) // getting user data
+        )      
 
     }
   </script>
