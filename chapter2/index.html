@@ -11,18 +11,18 @@
 <body>
   <header>
     <h1 id="namaLengkap">Ghufron Bagaskara</h1>
-    <button onclick="getUserData()">Ganti Data</button>
+    <button onclick="getUserData(4)">Ganti Data</button>
   </header>
   <main>
-    <article>
+    <article onclick="getUserData(1)">
       <h3 id="judul1">Rekomendasi Film Action</h3>
       <p>ini adalah film actionnya</p>
     </article>
-    <article onmouseenter="articleEffect()" onmouseleave="articleEffectOff()" ondblclick="removeArticle()">
+    <article onclick="getUserData(2)" onmouseenter="articleEffect()" onmouseleave="articleEffectOff()" ondblclick="removeArticle()">
       <h3 id="judul2">Rekomendasi Film Drama</h3>
       <p>ini adalah film dramanya</p>
     </article>
-    <article>
+    <article onclick="getUserData(3)">
       <h3 id="judul3">Rekomendasi Film Romance</h3>
       <p>ini adalah film romancenya</p>
     </article>
@@ -62,15 +62,18 @@
       }
     }
 
-    function getUserData() {
-      const apiURL = "https://dummyjson.com/users/1"
+    function getUserData(idUser) {
+      const apiURL = "https://dummyjson.com/users/" + idUser
 
       fetch(apiURL)
         .then((data) => data.json()) // format data to json
         .then((user) => (namaLengkap.textContent = user.username) // getting user data
         )      
-
     }
+
+
+
+    
   </script>
 
 </body>
