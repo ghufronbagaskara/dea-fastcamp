@@ -18,7 +18,7 @@
       <h3 id="judul1">Rekomendasi Film Action</h3>
       <p>ini adalah film actionnya</p>
     </article>
-    <article>
+    <article onmouseenter="articleEffect()" onmouseleave="articleEffectOff()" ondblclick="removeArticle()">
       <h3 id="judul2">Rekomendasi Film Drama</h3>
       <p>ini adalah film dramanya</p>
     </article>
@@ -32,50 +32,9 @@
   </footer>
 
   <script>
-
-    const films = [
-      {
-        title: "Sabtu Bersama Bapak",
-        year: "1992",
-        description: "Ini adalah film bernuansa keluarga yang ada di netflix",
-        penulis: "Dembele",
-      },
-      {
-        title: "Dilan",
-        year: "2024",
-        description: "Ini adalah film bernuansa keluarga yang ada di netflix",
-        penulis: "Ryan Ryerson",
-      },
-      {
-        title: "Cyberpunk",
-        year: "2102",
-        description: "Ini adalah film bernuansa action yang ada di netflix",
-        penulis: "Rahman",
-      }
-    ] 
-
-    const userName = [
-      {
-        name: "Ghufron Bagaskara",
-        favorite: "Dilan"
-      }
-    ]
-    
-    const penulisFilm2 = films[1].penulis;
-    console.log(penulisFilm2);
-    
-    const user = userName
-    const film1 = films[0]
-    const film2 = films[1];
-    console.group("%cLOGGING FILM :", "color: tomato; font-size: 24px")
-    console.log({film1});
-    console.log({film2});
-    console.groupEnd()
-
-    const infoFilm = [film1, film2]
-    console.table(infoFilm);    
     
 
+    
     const article1 = document.getElementsByTagName("article")[0];
     const article2 = document.getElementsByTagName("article")[1];
     const article3 = document.getElementsByTagName("article")[2];
@@ -92,7 +51,19 @@
       article3.style.transition = "1.5s"
     }
 
-    article2.addEventListener("click", articleEffect);
+    function articleEffectOff() {
+      article1.style.scale = "1"
+      article2.style.scale = "1"
+      article3.style.scale = "1"
+    }
+
+    function removeArticle(){
+      const isConfirm = confirm("apakah anda yakin ingin menghapus artikel ini..")
+      if (isConfirm) {
+        article2.remove()
+      }
+    }
+
 
 
 
