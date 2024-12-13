@@ -13,69 +13,34 @@
     <h1 id="namaLengkap">Ghufron Bagaskara</h1>
     <button onclick="getUserData(4)">Ganti Data</button>
   </header>
+
   <main>
-    <article onclick="getUserData(1)">
-      <h3 id="judul1">Rekomendasi Film Action</h3>
-      <p>ini adalah film actionnya</p>
-    </article>
-    <article onclick="getUserData(2)" onmouseenter="articleEffect()" onmouseleave="articleEffectOff()" ondblclick="removeArticle()">
-      <h3 id="judul2">Rekomendasi Film Drama</h3>
-      <p>ini adalah film dramanya</p>
-    </article>
-    <article onclick="getUserData(3)">
-      <h3 id="judul3">Rekomendasi Film Romance</h3>
-      <p>ini adalah film romancenya</p>
-    </article>
+    <form onsubmit="register()" method="post">
+      <label >username</label>
+      <input type="text" id="username">
+
+      <label for="">password</label>
+      <input type="password" id="password">
+      <button type="submit">Register</button>
+    </form>
   </main>
-  <footer>
-    <p>🔥 by : Ghufron Bagaskara</p>
-  </footer>
 
   <script>
-
-    const article1 = document.getElementsByTagName("article")[0];
-    const article2 = document.getElementsByTagName("article")[1];
-    const article3 = document.getElementsByTagName("article")[2];
-
-    function articleEffect() {
-      article2.style.backgroundColor = "tomato"
-      article2.style.color = "white"
-      article2.style.scale = "1.2"
-      article2.style.transition = "0.5s"
-
-      article1.style.scale = "0.7"
-      article1.style.transition = "1.56s"
-      article3.style.scale = "0.7"
-      article3.style.transition = "1.5s"
-    }
-
-    function articleEffectOff() {
-      article1.style.scale = "1"
-      article2.style.scale = "1"
-      article3.style.scale = "1"
-    }
-
-    function removeArticle() {
-      const isConfirm = confirm("apakah anda yakin ingin menghapus artikel ini..")
-      if (isConfirm) {
-        article2.remove()
+    function register(){
+      const inputUsername = username.value
+      const inputPassword = password.value
+      
+      if(inputUsername.length < 4){
+        return alert("username harus lebih dari 4 karakter")
       }
+
+      if (inputPassword.length < 8) {
+        return alert("password harus lebih dari 8 karakter")
+      }
+
+      alert("Berhasil mendaftar")
     }
-
-    function getUserData(idUser) {
-      const apiURL = "https://dummyjson.com/users/" + idUser
-
-      fetch(apiURL)
-        .then((data) => data.json()) // format data to json
-        .then((user) => (namaLengkap.textContent = user.username) // getting user data
-        )      
-    }
-
-
-
-    
   </script>
 
 </body>
-
 </html>
