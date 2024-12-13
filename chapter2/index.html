@@ -15,30 +15,13 @@
   </header>
 
   <main>
-    <form onsubmit="register()" method="post">
-      <label >username</label>
-      <input type="text" id="username">
-
-      <label for="">password</label>
-      <input type="password" id="password">
-      <button type="submit">Register</button>
-    </form>
+    <h3>Welcome to HomePage</h3>
+    <button onclick="toRegister()">Register Page</button>
   </main>
 
   <script>
-    function register(){
-      const inputUsername = username.value
-      const inputPassword = password.value
-      
-      if(inputUsername.length < 4){
-        return alert("username harus lebih dari 4 karakter")
-      }
-
-      if (inputPassword.length < 8) {
-        return alert("password harus lebih dari 8 karakter")
-      }
-
-      alert("Berhasil mendaftar")
+    function toRegister(){
+      window.location.replace("register.html")
     }
   </script>
 
