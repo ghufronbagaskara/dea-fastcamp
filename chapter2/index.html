@@ -33,9 +33,48 @@
 
   <script>
 
-    const article1 = document.getElementsByTagName("article")[0]
-    const article2 = document.getElementsByTagName("article")[1]
-    const article3 = document.getElementsByTagName("article")[2]
+    const films = [
+      {
+        title: "Sabtu Bersama Bapak",
+        year: "1992",
+        description: "Ini adalah film bernuansa keluarga yang ada di netflix",
+        penulis: "Dembele",
+      },
+      {
+        title: "Dilan",
+        year: "2024",
+        description: "Ini adalah film bernuansa keluarga yang ada di netflix",
+        penulis: "Ryan Ryerson",
+      },
+      {
+        title: "Cyberpunk",
+        year: "2102",
+        description: "Ini adalah film bernuansa action yang ada di netflix",
+        penulis: "Rahman",
+      }
+    ] 
+
+    const userName = [
+      {
+        name: "Ghufron Bagaskara",
+        favorite: "Dilan"
+      }
+    ]
+    
+    const penulisFilm2 = films[1].penulis;
+    console.log(penulisFilm2);
+    
+    const user = userName
+    const film1 = films[0]
+    const film2 = films[1];
+
+    const information = [user, film1, film2]
+    console.log(information);
+    
+
+    const article1 = document.getElementsByTagName("article")[0];
+    const article2 = document.getElementsByTagName("article")[1];
+    const article3 = document.getElementsByTagName("article")[2];
 
     function articleEffect() {
       article2.style.backgroundColor = "tomato"
@@ -49,9 +88,9 @@
       article3.style.transition = "1.5s"
     }
 
-    article2.addEventListener("click", articleEffect)
+    article2.addEventListener("click", articleEffect);
 
-    
+
 
     function setNewElement() {
       const inputNama = prompt("Siapa nama kamu");
