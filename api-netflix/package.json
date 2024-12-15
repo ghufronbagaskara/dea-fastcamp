@@ -1,0 +1,20 @@
+{
+  "name": "api-netflix",
+  "version": "1.0.0",
+  "description": "api untuk netflix clone with express js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "js",
+    "netflix"
+  ],
+  "author": "ghufronbagas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
