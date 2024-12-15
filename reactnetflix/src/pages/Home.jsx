@@ -22,7 +22,7 @@ function Home() {
   return (
     <Layout>
       <h1>{language == "en" ? "Watch Netflix Free!" : "Tonton Netflix Gratis!"}</h1>
-      <p>Message from api : {movies?.message}</p>
+      <p className='bg-black text-white p-4 text-center'>Message from api : {movies?.message}</p>
     </Layout>
   );
 }
