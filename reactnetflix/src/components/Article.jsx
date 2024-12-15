@@ -1,4 +1,4 @@
-function Articles(props) {
+function Article(props) {
     const title = props.title
     const description = props.description
 
@@ -23,4 +23,4 @@ function Articles(props) {
     );
 }
 
-export default Articles
+export default Article
