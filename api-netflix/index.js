@@ -3,6 +3,9 @@ const app = express()
 
 const PORT = 3002
 
+app.use(express.json())
+
+
 app.get("/", (request, response) => {
     response.status(200).json({ message: "Hello World API" })
 })
