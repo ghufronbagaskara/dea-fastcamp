@@ -8,7 +8,7 @@ function NavBar() {
         <div className="navbar">
             <h3>Netflix</h3>
             <div>
-                <button onClick={() => setLanguage("id")}>Indonesia</button>
+                <button className="btn btn-accent btn-active mr-4" onClick={() => setLanguage("id")}>Indonesia</button>
                 <button onClick={() => setLanguage("en")}>English</button>
             </div>
         </div>
