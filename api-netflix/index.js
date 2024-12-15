@@ -1,11 +1,12 @@
 const express = require("express");
-const app = express()
+const cors = require("cors")
 const { OK, ERR } = require('./utils/response')
 
+const app = express()
 const PORT = 3002
 
 app.use(express.json())
-
+app.use(cors())
 
 // Main Endpoint (Good Format)
 app.get("/", (request, response) => {
